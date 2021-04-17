@@ -1,0 +1,97 @@
+.main{
+    padding: 33px 0 50px 0;
+    background-color: $dp;
+    min-height: 500px;
+    display: none;
+    &_active{
+        display: block;
+    }
+    &__sort{
+        margin-top: 54px;
+        display: flex;
+    }
+    &__text{
+        margin-right: 40px;
+        font-weight: 600;
+        font-size: 20px;
+        color: $text-color;
+    }
+    &__platform, &__direction{
+        background: transparent;
+        border: none;
+        font-weight: 500;
+        font-size: 16px;
+        color: $text-color;
+        margin: 0 15px;
+        cursor: pointer;
+        option{
+            background-color: $main-color;
+            border: none;
+            outline: none;
+        }
+    }
+    &__box{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 50px 20px;
+        margin-top: 50px;
+        &_item{
+            width: 311px;
+            min-height: 311px;
+        }
+        &_text{
+            font-weight: 500;
+            font-size: 20px;
+            color: $text-color;
+            margin-left: 10px;
+        }
+        &_social{
+            display: flex;
+            margin-top: 10px;
+        }
+    }
+    &__wrapper_inner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.overlay{
+    background: rgba(189, 28, 159, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 13px 20px 12px;
+    &_active{
+        display: none;
+    }
+}
+
+#first{
+    background: url('../img/item1.png') center (center / cover) no-repeat;
+}
+#second{
+    background: url('../img/item2.png') center (center / cover) no-repeat;
+}
+#third{
+    background: url('../img/item3.png') center (center / cover) no-repeat;
+}
+#four{
+    background: url('../img/item4.png') center (center / cover) no-repeat;
+}
+#five{
+    background: url('../img/item5.png') center (center / cover) no-repeat;
+}
+#six{
+    background: url('../img/main_women.png') center (center / cover) no-repeat;
+}
+#seven{
+    background: url('../img/item7.png') center (center / cover) no-repeat;
+}
+#eight{
+    background: url('../img/item8.png') center (center / cover) no-repeat;
+}

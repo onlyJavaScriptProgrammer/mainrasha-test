@@ -1,0 +1,21 @@
+.title{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+    color: $text-color;
+    &__small{
+        font-weight: 700;
+        font-size: 30px;
+        color: $text-color;
+    }
+}
+
+.mt80{
+    margin-top: 80px;
+}
+
+.subtitle{
+    font-weight: 700;
+    font-size: 28px;
+    color: $text-color;
+}

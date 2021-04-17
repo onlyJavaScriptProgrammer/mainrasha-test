@@ -1,0 +1,109 @@
+.blogger{
+    background-color: $dp;
+    display: none;
+    &_active{
+        display: block;
+    }
+    .info{
+        display: flex;
+        height: 510px;
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 5px;
+        border: 1px solid $text-color;
+        padding-right: 40px;
+        &__data{
+            margin-left: 40px;
+            &_social{
+                display: flex;
+                align-items: center;
+            }
+            &_text{
+                margin-left: 20px;
+                font-weight: 700;
+                font-size: 30px;
+                color: $text-color;
+                span{
+                    display: block;
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: $text-color;
+                }
+            }
+            &_description{
+                padding-bottom: 10px;
+                height: 150px;
+                overflow-y: scroll;
+                &::-webkit-scrollbar{
+                    width: 10px;
+                    height: 150px;
+                }
+                &::-webkit-scrollbar-thumb{
+                    background-color: $text-color;
+                    border-radius: 5px;
+                }
+                &::-webkit-scrollbar-track{
+                    width: 7px;
+                    background-color: #969696;
+                    border-radius: 5px;
+                }
+            }
+            &_chanel{
+                margin-top: 10px;
+                font-size: 16px;
+                font-weight: 500;
+                color: $text-color;
+                line-height: 24px;
+            }
+            &_wrapper{
+                display: grid;
+                grid-template-columns: repeat(2, 300px);
+                grid-template-rows: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+    }
+
+    .videos{
+        padding-bottom: 80px;
+        &__wrapper{
+            display: grid;
+            grid-template-columns: repeat(3, minmax(300px, 1fr));
+            grid-template-rows: repeat(2, 1fr);
+            gap: 30px 20px;
+            margin-top: 50px;
+        }
+        &__item{
+            position: relative;
+            width: 421px;
+            height: 217px;
+            z-index: 2;
+            &::after, &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &::before{
+                border-top: 40px solid transparent;
+                border-bottom: 40px solid transparent;
+                border-left: 60px solid $text-color;
+                z-index: 5;
+                cursor: pointer;
+            }
+            &::after{
+                width: 100%;
+                height: 100%;
+                background-color: rgba(110, 16, 94, 0.25);
+            }
+        }
+    }
+}
+
+hr{
+    width: 808px;
+    background-color: $text-color;
+    margin: 30px 0;
+}
+

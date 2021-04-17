@@ -1,0 +1,44 @@
+.other{
+    background-color: $dp;
+    padding-bottom: 101px;
+    &__box{
+        display: grid;
+        grid-template-columns: repeat(8, minmax(300px, 1fr));
+        grid-template-rows: 1fr;
+        gap: 0 20px;
+        margin-top: 50px;
+        overflow-x: auto;
+        &_item{
+            width: 311px;
+            min-height: 311px;
+        }
+        &_text{
+            font-weight: 500;
+            font-size: 20px;
+            color: $text-color;
+            margin-left: 10px;
+        }
+        &_social{
+            display: flex;
+            margin-top: 10px;
+        }
+        &::-webkit-scrollbar{
+            width: 311px;
+            height: 10px;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: $text-color;
+            border-radius: 5px;
+        }
+        &::-webkit-scrollbar-track{
+            height: 7px;
+            background-color: #969696;
+            border-radius: 5px;
+        }
+    }
+    &__wrapper_inner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
